@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<meta charset="UTF-8">
+	<title>Web button generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+	<h1>Web button generator</h1>
+	<noscript><p>This generator uses JavaScript</p></noscript>
+<div class="form">
+	<p id="generated"></p>
+	<p><label for="style">Style</label> 
+		<select id="style">
+			<option value="normal" selected>Normal</option>
+			<option value="bold">Bold</option>
+			<option value="expanded">Expanded</option>
+			<option value="expanded bold">Bold Expanded</option>
+		</select>
+	</p>
+	<p><label for="input">Your text</label><input type="text" id="input" value="-  Cyberpunk  -"></p>
+	<p><label for="color">Color</label><input type="text" id="color" value="fff"></p>
+	<p><label for="stroke">Text stroke</label><input type="text" id="stroke" value="000"></p>
+	<p><label for="border">Outer border</label><input type="text" id="border" value="000"></p>
+	<p><label for="background">Background</label><input type="text" id="background" value="263238"></p>
+	<p><label for="border">Inner border</label><input type="text" id="iborder" value="FFCA28"></p>
+</div>
+<p><a href="" id="save" download>Click to save</a> your button.</p>
+<ul id="history" class="ns"></ul>
+<footer>
+	<p><a href="https://sh2.us/buttons/">Back</a></p>
+</footer>
+</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

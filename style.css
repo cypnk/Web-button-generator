@@ -1,0 +1,52 @@
+@font-face { font-family: 'Silkscreen'; src: url(silkscreen/slkscr.ttf) format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Silkscreen'; src: url(silkscreen/slkscrb.ttf) format("truetype"); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'Silkscreen'; src: url(silkscreen/slkscre.ttf) format("truetype"); font-weight: normal; font-style: normal; font-stretch: expanded; }
+@font-face { font-family: 'Silkscreen'; src: url(silkscreen/slkscreb.ttf) format("truetype"); font-weight: bold; font-style: normal; font-stretch: expanded; }
+
+body { font:normal 86% "Segoe UI", "Myriad", Tahoma, Sans-serif; color:#000; background:#f5f5f5; margin:0; padding:10px; }
+
+div.page { max-width:800px; }
+
+h1, h2, ul:not(.index), ul:not(.index) li { margin:0; padding:0; border:0; }
+h1, h2 { font-weight:normal; color:#333; }
+h1 { font-size:230%; padding:5px 0; }
+h2 { font-size:250%; padding:10px 5px; margin: 0 0 10px 0; color:#a33; background:#eee; }
+h2 span { font-size:40%; }
+
+a { color: #a33; font-weight:bold; }
+a:hover { text-decoration:none; }
+h1 a { text-decoration:none; font-weight:normal; }
+
+strong { color:#a44; }
+
+ol { list-style: decimal-leading-zero; }
+ul:not(.index) { 
+	max-width: 500px;
+	-webkit-column-count: 5;
+	column-count: 5;
+	list-style: none;
+}
+ul:not(.index) li { margin: .5em 0; display: inline-block; }
+ul:not(.index) li a { position: relative; }
+ul:not(.index) li a:hover:after {
+	position: absolute;
+	content: attr(href);
+	top: -16px;
+	left: 0px;
+	background: #eee;
+	color: #a33;
+	white-space: nowrap;
+	z-index: 1
+}
+ul.ns li a:hover:after {
+	display: none;
+}
+ul.index li {
+	margin: .5rem 1rem;
+}
+.form { margin-top: 2rem; max-width: 500px; display: grid; grid-template-columns: 1fr 1fr; }
+input, select { font: inherit; border: 1px solid #999; padding: .2rem .5rem; }
+input[type="text"], select { display: block; }
+p#generated { padding: 1rem; margin: 0 2rem; }
+hr { clear:both; margin: 10px 0; border:0; height:1px; background:transparent; }
+footer { font-size:90%; font-weight:bold; color:#555; text-align:center; }

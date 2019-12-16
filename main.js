@@ -154,8 +154,10 @@ window.onload = () => {
 			x.strokeText( tx, cx, cy );
 		}
 		// Foreground text
+		x.strokeStyle	= 'rgba( 0, 0, 0, 0.1 )';
+		x.lineWidth	= 0;
+		x.strokeText( tx, cx, cy );
 		x.fillStyle	= '#' + o.value;
-		x.lineWidth	= 1;
 		x.fillText( tx, cx, cy );
 	};
 	

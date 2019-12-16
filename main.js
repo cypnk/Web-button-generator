@@ -7,8 +7,9 @@ presets =
 		"field" : "btn_rss", 
 		"data" : [
 			{ "k": "input", "v": "rss  feed       " }, 
+			{ "k": "vertical", "v": "-1" }, 
 			{ "k": "color", "v": "fff" }, 
-			{ "k": "style", "v": "normal" },
+			{ "k": "style", "v": "normal" }, 
 			{ "k": "stroke", "v": "" }, 
 			{ "k": "background", "v": "888" }, 
 			{ "k": "border", "v": "000" }, 
@@ -21,9 +22,10 @@ presets =
 	}, { 
 		"field": "btn_reset", 
 		"data" : [
-			{  "k": "input", "v": "-  Cyberpunk  -" }, 
+			{ "k": "input", "v": "-  Cyberpunk  -" }, 
+			{ "k": "vertical", "v": "-1" }, 
 			{ "k": "color", "v": "fff" }, 
-			{ "k": "style", "v": "normal" },
+			{ "k": "style", "v": "normal" }, 
 			{ "k": "stroke", "v": "000" }, 
 			{ "k": "background", "v": "263238" }, 
 			{ "k": "border", "v": "000" }, 
@@ -82,6 +84,7 @@ window.onload = () => {
 	sw	= 25,
 	c	= cr( 'canvas' ),
 	t	= gId( 'input' ),
+	v	= gId( 'vertical' ),
 	o	= gId( 'color' ),
 	s	= gId( 'style' ),
 	k	= gId( 'stroke' ),
@@ -115,7 +118,9 @@ window.onload = () => {
 		const 
 		tx		= t.value,
 		cx		= c.width / 2,
-		cy		= ( c.height / 2 ) - 1;
+		cy		= ( c.height / 2 ) + parseInt( v.value );
+		
+		//console.log(f.value);
 		
 		// Border
 		x.fillStyle	= '#' + d.value;

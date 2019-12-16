@@ -11,7 +11,8 @@
 	<h1>Web button generator</h1>
 	<noscript><p>This generator uses JavaScript</p></noscript>
 	<p>Presets : 
-		<a href="#" id="btn_rss" rel="preset">RSS feed</a> | 
+		<a href="#" id="btn_rss" rel="preset">RSS Feed</a> | 
+		<a href="#" id="btn_atom" rel="preset">Atom Feed</a> | 
 		<a href="#" id="btn_reset" rel="preset">Reset</a>
 	</p>
 <div class="form">
@@ -32,10 +33,12 @@
 	<p><label for="background">Background</label><input type="text" id="background" value="263238"></p>
 	<p><label for="iborder">Inner border</label><input type="text" id="iborder" value="FFCA28"></p>
 	
+	<p><label for="ladj">Left adjust</label><input type="range" id="ladj" value="25" min="0" max="88" step="1"></p>
 	<p><label for="lseg">Left segment</label><input type="text" id="lseg" value="263238"></p>
 	<p><label for="lborder">Left inner border</label><input type="text" id="lborder" value="263238"></p>
 	
 	<p><label for="rseg">Right segment</label><input type="text" id="rseg" value="263238"></p>
+	<p><label for="radj">Right adjust</label><input type="range" id="radj" value="25" min="0" max="88" step="1"></p>
 	<p><label for="rborder">Right inner border</label><input type="text" id="rborder" value="263238"></p>
 </div>
 <p><a href="" id="save" download>Click to save</a> your button.</p>

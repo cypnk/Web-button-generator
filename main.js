@@ -24,6 +24,7 @@ window.onload = () => {
 	const
 	w	= 88,
 	h	= 15,
+	sw	= 25,
 	c	= cr( 'canvas' ),
 	t	= gId( 'input' ),
 	o	= gId( 'color' ),
@@ -75,20 +76,19 @@ window.onload = () => {
 		
 		// Left segment
 		x.fillStyle	= '#' + ls.value;
-		x.fillRect( 2, 2, 25, c.height - 4 );
+		x.fillRect( 2, 2, sw, c.height - 4 );
 		
 		// Left border
 		x.fillStyle	= '#' + lb.value;
-		x.fillRect( 26, 2, 1, c.height - 4 );
+		x.fillRect( sw + 1, 2, 1, c.height - 4 );
 		
 		// Right segment
 		x.fillStyle	= '#' + rs.value;
-		x.fillRect( c.width - 27, 2, 25, c.height - 4 );
+		x.fillRect( c.width - ( sw + 2 ), 2, sw, c.height - 4 );
 		
 		// Right border
 		x.fillStyle	= '#' + rb.value;
-		x.fillRect( c.width - 27, 2, 1, c.height - 4 );
-		
+		x.fillRect( c.width - ( sw + 3 ), 2, 1, c.height - 4 );
 		
 		x.font		= s.value + ' 9px Silkscreen';
 		

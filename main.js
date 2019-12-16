@@ -1,11 +1,47 @@
 "use strict";
 
+const 
+presets = 
+`{ "presets" : [
+	{ 
+		"field" : "btn_rss", 
+		"data" : [
+			{ "k": "input", "v": "rss  feed       " }, 
+			{ "k": "color", "v": "fff" }, 
+			{ "k": "stroke", "v": "" }, 
+			{ "k": "background", "v": "999" }, 
+			{ "k": "iborder", "v": "fff" }, 
+			{ "k": "lseg", "v": "f73" }, 
+			{ "k": "rseg", "v": "999" }, 
+			{ "k": "lborder", "v": "fff" }, 
+			{ "k": "rborder", "v": "999" } 
+		]
+	}, { 
+		"field": "btn_reset", 
+		"data" : [
+			{  "k": "input", "v": "-  Cyberpunk  -" }, 
+			{ "k": "color", "v": "fff" }, 
+			{ "k": "stroke", "v": "000" }, 
+			{ "k": "background", "v": "263238" }, 
+			{ "k": "iborder", "v": "FFCA28" }, 
+			{ "k": "lseg", "v": "263238" }, 
+			{ "k": "rseg", "v": "263238" }, 
+			{ "k": "lborder", "v": "263238" }, 
+			{ "k": "rborder", "v": "263238" } 
+		]
+	}
+] }`;
+
 function gId( n ) {
 	return document.getElementById( n );
 }
 
 function cr( n ) {
 	return document.createElement( n );
+}
+
+function qr( l ) {
+	return document.querySelectorAll( l );
 }
 
 function gk( c, s ) {
@@ -20,7 +56,22 @@ function gk( c, s ) {
 	return r;
 }
 
+function fl( j ) {
+	const p = JSON.parse( j );
+	
+	for ( const i of p.presets ) {
+		gId( i.field ).addEventListener( 'click', function() {
+			for( const d of i.data ) {
+				gId( d.k ).value = d.v;
+			}
+		} );
+	}
+}
+
 window.onload = () => {
+	
+	fl( presets );
+	
 	const
 	w	= 88,
 	h	= 15,

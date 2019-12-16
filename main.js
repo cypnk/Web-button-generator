@@ -9,12 +9,13 @@ presets =
 			{ "k": "input", "v": "rss  feed       " }, 
 			{ "k": "color", "v": "fff" }, 
 			{ "k": "stroke", "v": "" }, 
-			{ "k": "background", "v": "999" }, 
+			{ "k": "background", "v": "888" }, 
+			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "fff" }, 
 			{ "k": "lseg", "v": "f73" }, 
-			{ "k": "rseg", "v": "999" }, 
+			{ "k": "rseg", "v": "888" }, 
 			{ "k": "lborder", "v": "fff" }, 
-			{ "k": "rborder", "v": "999" } 
+			{ "k": "rborder", "v": "888" } 
 		]
 	}, { 
 		"field": "btn_reset", 
@@ -23,6 +24,7 @@ presets =
 			{ "k": "color", "v": "fff" }, 
 			{ "k": "stroke", "v": "000" }, 
 			{ "k": "background", "v": "263238" }, 
+			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "FFCA28" }, 
 			{ "k": "lseg", "v": "263238" }, 
 			{ "k": "rseg", "v": "263238" }, 

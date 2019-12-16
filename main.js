@@ -30,7 +30,14 @@ window.onload = () => {
 	s	= gId( 'style' ),
 	k	= gId( 'stroke' ),
 	d	= gId( 'border' ),
+	
 	i	= gId( 'iborder' ),
+	ls	= gId( 'lseg' ),
+	rs	= gId( 'rseg' ),
+	
+	lb	= gId( 'lborder' ),
+	rb	= gId( 'rborder' ),
+	
 	u	= gId( 'history' ),
 	g	= gId( 'background' ),
 	a	= gId( 'save' ),
@@ -66,13 +73,31 @@ window.onload = () => {
 		x.fillStyle	= '#' + g.value;
 		x.fillRect( 2, 2, c.width - 4, c.height - 4 );
 		
+		// Left segment
+		x.fillStyle	= '#' + ls.value;
+		x.fillRect( 2, 2, 25, c.height - 4 );
+		
+		// Left border
+		x.fillStyle	= '#' + lb.value;
+		x.fillRect( 26, 2, 1, c.height - 4 );
+		
+		// Right segment
+		x.fillStyle	= '#' + rs.value;
+		x.fillRect( c.width - 27, 2, 25, c.height - 4 );
+		
+		// Right border
+		x.fillStyle	= '#' + rb.value;
+		x.fillRect( c.width - 27, 2, 1, c.height - 4 );
+		
+		
 		x.font		= s.value + ' 9px Silkscreen';
 		
 		// Text stroke
-		x.strokeStyle	= '#' + k.value;
-		x.lineWidth	= 2;
-		x.strokeText( tx, cx, cy );
-		
+		if ( k.value ) {
+			x.strokeStyle	= '#' + k.value;
+			x.lineWidth	= 2;
+			x.strokeText( tx, cx, cy );
+		}
 		// Foreground text
 		x.fillStyle	= '#' + o.value;
 		x.lineWidth	= 1;

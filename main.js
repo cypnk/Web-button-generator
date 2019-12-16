@@ -11,6 +11,7 @@ presets =
 			{ "k": "color", "v": "fff" }, 
 			{ "k": "style", "v": "normal" }, 
 			{ "k": "stroke", "v": "" }, 
+			{ "k": "shadow", "v": "0.1" }, 
 			{ "k": "background", "v": "888" }, 
 			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "fff" }, 
@@ -29,6 +30,7 @@ presets =
 			{ "k": "color", "v": "fff" }, 
 			{ "k": "style", "v": "normal" }, 
 			{ "k": "stroke", "v": "" }, 
+			{ "k": "shadow", "v": "0.1" }, 
 			{ "k": "background", "v": "888" }, 
 			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "fff" }, 
@@ -47,6 +49,7 @@ presets =
 			{ "k": "color", "v": "fff" }, 
 			{ "k": "style", "v": "normal" }, 
 			{ "k": "stroke", "v": "000" }, 
+			{ "k": "shadow", "v": "0.1" }, 
 			{ "k": "background", "v": "263238" }, 
 			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "FFCA28" }, 
@@ -112,6 +115,8 @@ window.onload = () => {
 	d	= gId( 'border' ),
 	
 	i	= gId( 'iborder' ),
+	sh	= gId( 'shadow' ),
+	
 	la	= gId( 'ladj' ),
 	ra	= gId( 'radj' ),
 	ls	= gId( 'lseg' ),
@@ -129,6 +134,7 @@ window.onload = () => {
 	c.height	= h;
 	
 	gId( 'generated' ).appendChild( c );
+	x.imageSmoothingEnabled = false;
 	x.textBaseline	= 'middle';
 	x.textAlign	= 'center';
 	
@@ -142,6 +148,7 @@ window.onload = () => {
 		tx		= t.value,
 		cx		= c.width / 2,
 		cy		= ( c.height / 2 ) + parseInt( v.value ),
+		ts		= parseFloat( sh.value ),
 		lx		= parseInt( la.value ),
 		rx		= parseInt( ra.value );
 		
@@ -184,7 +191,7 @@ window.onload = () => {
 			x.strokeText( tx, cx, cy );
 		}
 		// Foreground text
-		x.strokeStyle	= 'rgba( 0, 0, 0, 0.1 )';
+		x.strokeStyle	= 'rgba( 0, 0, 0, ' + ts + ' )';
 		x.lineWidth	= 0;
 		x.strokeText( tx, cx, cy );
 		x.fillStyle	= '#' + o.value;

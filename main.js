@@ -14,6 +14,24 @@ presets =
 			{ "k": "background", "v": "888" }, 
 			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "fff" }, 
+			{ "k": "ladj", "v": "25" }, 
+			{ "k": "lseg", "v": "f73" }, 
+			{ "k": "rseg", "v": "888" }, 
+			{ "k": "lborder", "v": "fff" }, 
+			{ "k": "rborder", "v": "888" } 
+		]
+	}, { 
+		"field" : "btn_atom", 
+		"data" : [
+			{ "k": "input", "v": "atom  feed     " }, 
+			{ "k": "vertical", "v": "-1" }, 
+			{ "k": "color", "v": "fff" }, 
+			{ "k": "style", "v": "normal" }, 
+			{ "k": "stroke", "v": "" }, 
+			{ "k": "background", "v": "888" }, 
+			{ "k": "border", "v": "000" }, 
+			{ "k": "iborder", "v": "fff" }, 
+			{ "k": "ladj", "v": "34" }, 
 			{ "k": "lseg", "v": "f73" }, 
 			{ "k": "rseg", "v": "888" }, 
 			{ "k": "lborder", "v": "fff" }, 
@@ -30,6 +48,7 @@ presets =
 			{ "k": "background", "v": "263238" }, 
 			{ "k": "border", "v": "000" }, 
 			{ "k": "iborder", "v": "FFCA28" }, 
+			{ "k": "ladj", "v": "25" }, 
 			{ "k": "lseg", "v": "263238" }, 
 			{ "k": "rseg", "v": "263238" }, 
 			{ "k": "lborder", "v": "263238" }, 
@@ -81,7 +100,6 @@ window.onload = () => {
 	const
 	w	= 88,
 	h	= 15,
-	sw	= 25,
 	c	= cr( 'canvas' ),
 	t	= gId( 'input' ),
 	v	= gId( 'vertical' ),
@@ -91,6 +109,8 @@ window.onload = () => {
 	d	= gId( 'border' ),
 	
 	i	= gId( 'iborder' ),
+	la	= gId( 'ladj' ),
+	ra	= gId( 'radj' ),
 	ls	= gId( 'lseg' ),
 	rs	= gId( 'rseg' ),
 	
@@ -118,7 +138,9 @@ window.onload = () => {
 		const 
 		tx		= t.value,
 		cx		= c.width / 2,
-		cy		= ( c.height / 2 ) + parseInt( v.value );
+		cy		= ( c.height / 2 ) + parseInt( v.value ),
+		lx		= parseInt( la.value ),
+		rx		= parseInt( ra.value );
 		
 		//console.log(f.value);
 		
@@ -136,19 +158,19 @@ window.onload = () => {
 		
 		// Left segment
 		x.fillStyle	= '#' + ls.value;
-		x.fillRect( 2, 2, sw, c.height - 4 );
+		x.fillRect( 2, 2, lx, c.height - 4 );
 		
 		// Left border
 		x.fillStyle	= '#' + lb.value;
-		x.fillRect( sw + 1, 2, 1, c.height - 4 );
+		x.fillRect( lx + 1, 2, 1, c.height - 4 );
 		
 		// Right segment
 		x.fillStyle	= '#' + rs.value;
-		x.fillRect( c.width - ( sw + 2 ), 2, sw, c.height - 4 );
+		x.fillRect( c.width - ( rx + 2 ), 2, rx, c.height - 4 );
 		
 		// Right border
 		x.fillStyle	= '#' + rb.value;
-		x.fillRect( c.width - ( sw + 3 ), 2, 1, c.height - 4 );
+		x.fillRect( c.width - ( rx + 3 ), 2, 1, c.height - 4 );
 		
 		x.font		= s.value + ' 9px Silkscreen';
 		

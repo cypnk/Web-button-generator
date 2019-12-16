@@ -8,6 +8,7 @@ presets =
 		"data" : [
 			{ "k": "input", "v": "rss  feed       " }, 
 			{ "k": "color", "v": "fff" }, 
+			{ "k": "style", "v": "normal" },
 			{ "k": "stroke", "v": "" }, 
 			{ "k": "background", "v": "888" }, 
 			{ "k": "border", "v": "000" }, 
@@ -22,6 +23,7 @@ presets =
 		"data" : [
 			{  "k": "input", "v": "-  Cyberpunk  -" }, 
 			{ "k": "color", "v": "fff" }, 
+			{ "k": "style", "v": "normal" },
 			{ "k": "stroke", "v": "000" }, 
 			{ "k": "background", "v": "263238" }, 
 			{ "k": "border", "v": "000" }, 

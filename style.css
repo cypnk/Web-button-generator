@@ -22,8 +22,8 @@ strong { color:#a44; }
 ol { list-style: decimal-leading-zero; }
 ul:not(.index) { 
 	max-width: 500px;
-	-webkit-column-count: 5;
-	column-count: 5;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	list-style: none;
 }
 ul:not(.index) li { margin: .5em 0; display: inline-block; }
@@ -50,3 +50,10 @@ input[type="text"], input[type="range"], select { display: block; }
 p#generated { padding: 1rem; margin: 0 2rem; }
 hr { clear:both; margin: 10px 0; border:0; height:1px; background:transparent; }
 footer { font-size:90%; font-weight:bold; color:#555; text-align:center; }
+
+@media only screen and (max-width: 600px) {
+ul:not(.index) {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+}
+

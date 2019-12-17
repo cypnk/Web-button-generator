@@ -134,11 +134,11 @@ window.onload = () => {
 	
 	
 	gId( 'generated' ).appendChild( c );
-	c.width = ( w * 2 ) + 2;
-	c.height = ( h * 2 ) + 2;
+	c.width = ( w * 2 ) + 3;
+	c.height = ( h * 2 ) + 3;
 	
-	rc.width = w + 1;
-	rc.height = h + 1;
+	rc.width = w;
+	rc.height = h;
 	
 	dx.imageSmoothingEnabled	= false;
 	dx.shadowBlur			= 0;

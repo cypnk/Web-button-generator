@@ -134,10 +134,11 @@ window.onload = () => {
 	
 	
 	gId( 'generated' ).appendChild( c );
-	c.width = w * 2;
-	c.height = h * 2;
-	rc.width = w;
-	rc.height = h;
+	c.width = ( w * 2 ) + 2;
+	c.height = ( h * 2 ) + 2;
+	
+	rc.width = w + 1;
+	rc.height = h + 1;
 	
 	dx.imageSmoothingEnabled	= false;
 	dx.shadowBlur			= 0;
@@ -189,7 +190,7 @@ window.onload = () => {
 		x.fillStyle	= '#' + rb.value;
 		x.fillRect( c.width - ( rx + 5 ), 4, 2, c.height - 8 );
 		
-		x.font		= s.value + ' 19px Silkscreen';
+		x.font		= s.value + ' 14.2pt Silkscreen';
 		
 		// Text stroke
 		if ( k.value ) {
@@ -208,7 +209,7 @@ window.onload = () => {
 	};
 	
 	a.addEventListener( 'click',  function() {
-		dx.drawImage( c, 0, 0, c.width, c.height, 0, 0, w-1, h-1 );
+		dx.drawImage( c, 0, 0, c.width, c.height, 0, 0, w, h );
 		
 		const
 		el = cr( 'li' ),
